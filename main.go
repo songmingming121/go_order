@@ -1,12 +1,12 @@
 package main
 
 import (
+	"git.dev.tanikawa.com/go/go_user/handler"
+	"git.dev.tanikawa.com/go/go_user/subscriber"
 	"github.com/micro/go-log"
 	"github.com/micro/go-micro"
-	"go_user/handler"
-	"go_user/subscriber"
 
-	example "go_user/proto/example"
+	example "git.dev.tanikawa.com/go/go_user/proto/example"
 )
 
 func main() {

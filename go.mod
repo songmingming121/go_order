@@ -1,4 +1,4 @@
-module go_user
+module git.dev.tanikawa.com/go/go_user
 
 go 1.12
 
