@@ -5,7 +5,7 @@ import (
 
 	"github.com/micro/go-log"
 
-	example "git.dev.tanikawa.com/go/go_user/proto/example"
+	example "go_order/proto/example"
 )
 
 type Example struct{}
@@ -13,7 +13,7 @@ type Example struct{}
 // Call is a single request handler called via client.Call or the generated client code
 func (e *Example) Call(ctx context.Context, req *example.Request, rsp *example.Response) error {
 	log.Log("Received Example.Call request")
-	rsp.Msg = "Hello " + req.Name + "用户服务返回"
+	rsp.Msg = "Hello " + req.Name
 	return nil
 }
 

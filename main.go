@@ -1,18 +1,18 @@
 package main
 
 import (
-	"git.dev.tanikawa.com/go/go_user/handler"
-	"git.dev.tanikawa.com/go/go_user/subscriber"
 	"github.com/micro/go-log"
 	"github.com/micro/go-micro"
+	"go_order/handler"
+	"go_order/subscriber"
 
-	example "git.dev.tanikawa.com/go/go_user/proto/example"
+	example "go_order/proto/example"
 )
 
 func main() {
 	// New Service
 	service := micro.NewService(
-		micro.Name("go.micro.srv.go_user"),
+		micro.Name("go.micro.srv.go_order"),
 		micro.Version("latest"),
 	)
 
@@ -23,10 +23,10 @@ func main() {
 	example.RegisterExampleHandler(service.Server(), new(handler.Example))
 
 	// Register Struct as Subscriber
-	micro.RegisterSubscriber("go.micro.srv.go_user", service.Server(), new(subscriber.Example))
+	micro.RegisterSubscriber("go.micro.srv.go_order", service.Server(), new(subscriber.Example))
 
 	// Register Function as Subscriber
-	micro.RegisterSubscriber("go.micro.srv.go_user", service.Server(), subscriber.Handler)
+	micro.RegisterSubscriber("go.micro.srv.go_order", service.Server(), subscriber.Handler)
 
 	// Run service
 	if err := service.Run(); err != nil {

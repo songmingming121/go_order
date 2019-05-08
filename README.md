@@ -1,11 +1,11 @@
-# Go_user Service
+# Go_order Service
 
-This is the Go_user service
+This is the Go_order service
 
 Generated with
 
 ```
-micro new go_user --namespace=go.micro --type=srv
+micro new go_order --namespace=go.micro --type=srv
 ```
 
 ## Getting Started
@@ -16,9 +16,9 @@ micro new go_user --namespace=go.micro --type=srv
 
 ## Configuration
 
-- FQDN: go.micro.srv.go_user
+- FQDN: go.micro.srv.go_order
 - Type: srv
-- Alias: go_user
+- Alias: go_order
 
 ## Dependencies
 
@@ -46,7 +46,7 @@ make build
 
 Run the service
 ```
-./go_user-srv
+./go_order-srv
 ```
 
 Build a docker image

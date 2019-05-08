@@ -9,7 +9,7 @@ proto:
 .PHONY: build
 build: proto
 
-	go build -o go_user-srv main.go plugin.go
+	go build -o go_order-srv main.go plugin.go
 
 .PHONY: test
 test:
@@ -17,4 +17,4 @@ test:
 
 .PHONY: docker
 docker:
-	docker build . -t go_user-srv:latest
+	docker build . -t go_order-srv:latest

@@ -2,7 +2,7 @@
 // source: proto/example/example.proto
 
 /*
-Package go_micro_srv_go_user is a generated protocol buffer package.
+Package go_micro_srv_go_order is a generated protocol buffer package.
 
 It is generated from these files:
 	proto/example/example.proto
@@ -16,7 +16,7 @@ It has these top-level messages:
 	Ping
 	Pong
 */
-package go_micro_srv_go_user
+package go_micro_srv_go_order
 
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
@@ -62,7 +62,7 @@ func NewExampleService(name string, c client.Client) ExampleService {
 		c = client.NewClient()
 	}
 	if len(name) == 0 {
-		name = "go.micro.srv.go_user"
+		name = "go.micro.srv.go_order"
 	}
 	return &exampleService{
 		c:    c,
